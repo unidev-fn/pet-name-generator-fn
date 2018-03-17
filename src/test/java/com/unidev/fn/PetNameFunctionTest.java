@@ -1,9 +1,11 @@
 package com.unidev.fn;
 
-import com.fnproject.fn.testing.*;
-import org.junit.*;
+import static org.junit.Assert.assertFalse;
 
-import static org.junit.Assert.*;
+import com.fnproject.fn.testing.FnResult;
+import com.fnproject.fn.testing.FnTestingRule;
+import org.junit.Rule;
+import org.junit.Test;
 
 public class PetNameFunctionTest {
 
@@ -12,11 +14,11 @@ public class PetNameFunctionTest {
 
     @Test
     public void shouldReturnGreeting() {
-//        testing.givenEvent().enqueue();
-//        testing.thenRun(PetNameFunction.class, "handleRequest");
-//
-//        FnResult result = testing.getOnlyResult();
-//        assertEquals("Hello, world!", result.getBodyAsString());
+        testing.givenEvent().enqueue();
+        testing.thenRun(PetNameFunction.class, "handleRequest");
+
+        FnResult result = testing.getOnlyResult();
+        assertFalse(result.getBodyAsString().isEmpty());
     }
 
 }

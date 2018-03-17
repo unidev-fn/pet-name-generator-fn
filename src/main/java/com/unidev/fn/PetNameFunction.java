@@ -1,6 +1,5 @@
 package com.unidev.fn;
 
-import java.util.HashMap;
 import java.util.Map;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
