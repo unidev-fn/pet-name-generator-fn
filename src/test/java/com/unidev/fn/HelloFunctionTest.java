@@ -1,4 +1,4 @@
-package com.example.fn;
+package com.unidev.fn;
 
 import com.fnproject.fn.testing.*;
 import org.junit.*;
@@ -13,7 +13,7 @@ public class HelloFunctionTest {
     @Test
     public void shouldReturnGreeting() {
         testing.givenEvent().enqueue();
-        testing.thenRun(HelloFunction.class, "handleRequest");
+        testing.thenRun(PetNameFunction.class, "handleRequest");
 
         FnResult result = testing.getOnlyResult();
         assertEquals("Hello, world!", result.getBodyAsString());
